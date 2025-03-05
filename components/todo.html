@@ -1,0 +1,173 @@
+<div class="prototype">
+    <div class="screen-title">首页/待办看板</div>
+    <div class="header">
+        <div>嗨，小王</div>
+        <div><i class="fas fa-bell"></i></div>
+    </div>
+    <div class="content notion-container">
+
+        <div class="notion-section">
+            <div class="notion-section-title">
+                <i class="fas fa-calendar-day" style="color: #E57373;"></i> 即将到来的纪念日
+            </div>
+            
+            <div class="notion-panel" style="background-color: rgba(229, 115, 115, 0.05); border: 1px solid rgba(229, 115, 115, 0.2);">
+                <div style="display: flex; align-items: center; margin-bottom: 12px;">
+                    <div style="width: 40px; height: 40px; border-radius: 50%; background-color: rgba(229, 115, 115, 0.2); display: flex; align-items: center; justify-content: center; margin-right: 12px;">
+                        <i class="fas fa-birthday-cake" style="color: #E57373; font-size: 18px;"></i>
+                    </div>
+                    <div style="flex: 1;">
+                        <div style="font-weight: 500; margin-bottom: 2px;">小张生日</div>
+                        <div style="font-size: 13px; color: #777;">还有12天 (3月14日)</div>
+                    </div>
+                    <div>
+                        <button class="notion-btn" style="padding: 4px 8px; font-size: 12px;">
+                            <i class="fas fa-bell"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div style="display: flex; align-items: center;">
+                    <div style="width: 40px; height: 40px; border-radius: 50%; background-color: rgba(229, 115, 115, 0.2); display: flex; align-items: center; justify-content: center; margin-right: 12px;">
+                        <i class="fas fa-home" style="color: #E57373; font-size: 18px;"></i>
+                    </div>
+                    <div style="flex: 1;">
+                        <div style="font-weight: 500; margin-bottom: 2px;">入住周年纪念</div>
+                        <div style="font-size: 13px; color: #777;">还有31天 (4月2日)</div>
+                    </div>
+                    <div>
+                        <button class="notion-btn" style="padding: 4px 8px; font-size: 12px;">
+                            <i class="fas fa-bell"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="notion-tabs">
+            <div class="notion-tab active">今日待办</div>
+            <div class="notion-tab">明日待办</div>
+            <div class="notion-tab">逾期任务</div>
+        </div>
+        
+
+        
+        <div class="notion-section">
+            <div class="notion-section-title">
+                <i class="fas fa-calendar-day"></i> 今日 - 3月16日
+            </div>
+            
+            <div class="notion-task-card">
+                <div class="notion-task-header">
+                    <div class="notion-task-title">
+                        <div class="notion-task-indicator" style="background-color: var(--blue);"></div>
+                        客厅扫地
+                    </div>
+                    <div>18:30</div>
+                </div>
+                <div class="notion-task-meta">
+                    <i class="fas fa-repeat"></i> 每周三
+                </div>
+                <div class="notion-task-actions">
+                    <button class="notion-action-btn">
+                        <i class="fas fa-check"></i> 完成
+                    </button>
+                    <button class="notion-action-btn">
+                        <i class="fas fa-exchange-alt"></i> 转交
+                    </button>
+                    <button class="notion-action-btn">
+                        <i class="fas fa-ellipsis-h"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="notion-task-card">
+                <div class="notion-task-header">
+                    <div class="notion-task-title">
+                        <div class="notion-task-indicator" style="background-color: var(--green);"></div>
+                        购买厨房用品
+                    </div>
+                    <div>今日</div>
+                </div>
+                <div class="notion-task-meta">
+                    <i class="fas fa-clipboard-list"></i> 洗洁精、厨房纸、垃圾袋
+                </div>
+                <div class="notion-task-actions">
+                    <button class="notion-action-btn">
+                        <i class="fas fa-check"></i> 完成
+                    </button>
+                    <button class="notion-action-btn">
+                        <i class="fas fa-exchange-alt"></i> 转交
+                    </button>
+                    <button class="notion-action-btn">
+                        <i class="fas fa-ellipsis-h"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="notion-section">
+            <div class="notion-section-title">
+                <i class="fas fa-chart-line"></i> 本周进度
+            </div>
+            
+            <div class="notion-panel">
+                <div class="notion-stat-item">
+                    <div class="notion-avatar" style="background-color: var(--primary);">王</div>
+                    <div class="notion-stat-label">已完成</div>
+                    <div class="stat-bar" style="width: 120px; margin: 0 10px;">
+                        <div class="stat-bar-fill" style="width: 70%;"></div>
+                    </div>
+                    <div class="notion-stat-value">70%</div>
+                </div>
+                
+                <div class="notion-stat-item">
+                    <div class="notion-avatar" style="background-color: var(--secondary);">张</div>
+                    <div class="notion-stat-label">已完成</div>
+                    <div class="stat-bar" style="width: 120px; margin: 0 10px;">
+                        <div class="stat-bar-fill" style="width: 60%;"></div>
+                    </div>
+                    <div class="notion-stat-value">60%</div>
+                </div>
+                
+                <div class="notion-stat-item">
+                    <div class="notion-avatar" style="background-color: var(--accent);">李</div>
+                    <div class="notion-stat-label">已完成</div>
+                    <div class="stat-bar" style="width: 120px; margin: 0 10px;">
+                        <div class="stat-bar-fill" style="width: 85%;"></div>
+                    </div>
+                    <div class="notion-stat-value">85%</div>
+                </div>
+            </div>
+        </div>
+        
+        <div style="text-align: center; padding: 10px;">
+            <button class="notion-btn">
+                <i class="fas fa-plus"></i> 添加新任务
+            </button>
+        </div>
+    </div>
+    <div class="nav-tabs">
+        <div class="nav-tab active">
+            <i class="fas fa-tasks"></i>
+            <span>待办</span>
+        </div>
+        <div class="nav-tab">
+            <i class="fas fa-calendar"></i>
+            <span>日历</span>
+        </div>
+        <div class="nav-tab">
+            <i class="fas fa-plus-circle"></i>
+            <span>添加</span>
+        </div>
+        <div class="nav-tab">
+            <i class="fas fa-chart-bar"></i>
+            <span>统计</span>
+        </div>
+        <div class="nav-tab">
+            <i class="fas fa-user"></i>
+            <span>我的</span>
+        </div>
+    </div>
+</div>

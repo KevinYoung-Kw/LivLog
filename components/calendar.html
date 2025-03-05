@@ -1,0 +1,270 @@
+<div class="prototype">
+    <div class="screen-title">日历</div>
+    <div class="header">
+        <div><i class="fas fa-chevron-left"></i></div>
+        <div>2023年3月</div>
+        <div><i class="fas fa-chevron-right"></i></div>
+    </div>
+    <div class="content notion-container">
+        <!-- 添加日历过滤选项 -->
+        <div class="notion-tabs" style="margin-bottom: 10px;">
+            <div class="notion-tab active">全部</div>
+            <div class="notion-tab">任务</div>
+            <div class="notion-tab">纪念日</div>
+        </div>
+        
+        <div class="notion-calendar">
+            <div class="calendar-header">
+                <div class="calendar-header-day">日</div>
+                <div class="calendar-header-day">一</div>
+                <div class="calendar-header-day">二</div>
+                <div class="calendar-header-day">三</div>
+                <div class="calendar-header-day">四</div>
+                <div class="calendar-header-day">五</div>
+                <div class="calendar-header-day">六</div>
+            </div>
+            
+            <!-- First week -->
+            <div class="calendar-week">
+                <div class="calendar-day-cell">
+                    <div class="calendar-date other-month">26</div>
+                </div>
+                <div class="calendar-day-cell">
+                    <div class="calendar-date other-month">27</div>
+                </div>
+                <div class="calendar-day-cell">
+                    <div class="calendar-date other-month">28</div>
+                </div>
+                <div class="calendar-day-cell">
+                    <div class="calendar-date">1</div>
+                    <div class="calendar-task-item cleaning">客厅清扫 9:00</div>
+                    <div class="calendar-task-item bills">缴电费</div>
+                    <div class="calendar-task-count">+1 项</div>
+                </div>
+                <div class="calendar-day-cell">
+                    <div class="calendar-date">2</div>
+                </div>
+                <div class="calendar-day-cell">
+                    <div class="calendar-date">3</div>
+                    <!-- 添加纪念日样式 -->
+                    <div class="calendar-task-item memorial" style="background-color: rgba(229, 115, 115, 0.2); border-left: 2px solid #E57373;">
+                        <i class="fas fa-home" style="color: #E57373; margin-right: 3px;"></i>入住纪念日
+                    </div>
+                </div>
+                <div class="calendar-day-cell">
+                    <div class="calendar-date">4</div>
+                    <div class="calendar-task-item shopping">周末采购</div>
+                </div>
+            </div>
+            
+            <!-- Second week -->
+            <div class="calendar-week">
+                <div class="calendar-day-cell">
+                    <div class="calendar-date">5</div>
+                </div>
+                <div class="calendar-day-cell">
+                    <div class="calendar-date">6</div>
+                    <div class="calendar-task-item bills">网费续费</div>
+                </div>
+                <div class="calendar-day-cell">
+                    <div class="calendar-date">7</div>
+                </div>
+                <div class="calendar-day-cell">
+                    <div class="calendar-date">8</div>
+                    <div class="calendar-task-item cleaning">客厅清扫 9:00</div>
+                </div>
+                <div class="calendar-day-cell">
+                    <div class="calendar-date">9</div>
+                </div>
+                <div class="calendar-day-cell">
+                    <div class="calendar-date">10</div>
+                </div>
+                <div class="calendar-day-cell">
+                    <div class="calendar-date">11</div>
+                </div>
+            </div>
+            
+            <!-- Third week -->
+            <div class="calendar-week">
+                <div class="calendar-day-cell">
+                    <div class="calendar-date">12</div>
+                </div>
+                <div class="calendar-day-cell">
+                    <div class="calendar-date">13</div>
+                    <div class="calendar-task-item bills">水费</div>
+                </div>
+                <div class="calendar-day-cell">
+                    <div class="calendar-date">14</div>
+                    <!-- 修复纪念日卡片排版 -->
+                    <div class="calendar-task-item" style="background-color: rgba(229, 115, 115, 0.2); border-left: 2px solid #E57373; display: flex; align-items: center; padding: 2px 4px;">
+                        <i class="fas fa-birthday-cake" style="color: #E57373; margin-right: 3px; font-size: 10px;"></i>
+                        <span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">小张生日</span>
+                    </div>
+                </div>
+                <div class="calendar-day-cell">
+                    <div class="calendar-date">15</div>
+                    <div class="calendar-task-item cleaning">客厅清扫 9:00</div>
+                    <div class="calendar-task-item shopping">买厨房用品</div>
+                </div>
+                <div class="calendar-day-cell">
+                    <div class="calendar-date today">16</div>
+                    <div class="calendar-task-item cleaning">厨房清洁</div>
+                    <div class="calendar-task-item social">聚餐</div>
+                    <div class="calendar-task-count">+2 项</div>
+                </div>
+                <div class="calendar-day-cell">
+                    <div class="calendar-date">17</div>
+                </div>
+                <div class="calendar-day-cell">
+                    <div class="calendar-date">18</div>
+                    <div class="calendar-task-item shopping">周末采购</div>
+                </div>
+            </div>
+            
+            <!-- Fourth week -->
+            <div class="calendar-week">
+                <div class="calendar-day-cell">
+                    <div class="calendar-date">19</div>
+                </div>
+                <div class="calendar-day-cell">
+                    <div class="calendar-date">20</div>
+                </div>
+                <div class="calendar-day-cell">
+                    <div class="calendar-date">21</div>
+                </div>
+                <div class="calendar-day-cell">
+                    <div class="calendar-date">22</div>
+                    <div class="calendar-task-item cleaning">客厅清扫 9:00</div>
+                </div>
+                <div class="calendar-day-cell">
+                    <div class="calendar-date">23</div>
+                </div>
+                <div class="calendar-day-cell">
+                    <div class="calendar-date">24</div>
+                </div>
+                <div class="calendar-day-cell">
+                    <div class="calendar-date">25</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 修复扩展日期视图的纪念日卡片 -->
+        <div class="expanded-day-view">
+            <div class="expanded-day-header">
+                <div class="expanded-day-title">3月14日 · 星期二</div>
+                <div><i class="fas fa-plus"></i></div>
+            </div>
+            
+            <!-- 优化纪念日特殊展示区 -->
+            <div style="background: linear-gradient(to right, rgba(229, 115, 115, 0.1), rgba(229, 115, 115, 0.05)); 
+                        border-left: 3px solid #E57373; padding: 15px; margin-bottom: 15px; border-radius: 4px;">
+                <div style="display: flex; align-items: center;">
+                    <div style="width: 36px; height: 36px; border-radius: 50%; background-color: rgba(229, 115, 115, 0.2); 
+                              display: flex; align-items: center; justify-content: center; margin-right: 12px;">
+                        <i class="fas fa-birthday-cake" style="color: #E57373; font-size: 18px;"></i>
+                    </div>
+                    <div>
+                        <div style="font-weight: 500; font-size: 16px; margin-bottom: 2px;">小张生日</div>
+                        <div style="color: #777; font-size: 13px;">每年的特殊日子</div>
+                    </div>
+                </div>
+                
+                <div style="margin-top: 12px; display: flex; gap: 8px;">
+                    <button class="notion-btn" style="background-color: rgba(229, 115, 115, 0.1); border-color: #E57373; color: #E57373; flex: 1;">
+                        <i class="fas fa-gift"></i> 准备礼物
+                    </button>
+                    <button class="notion-btn" style="flex: 1;">
+                        <i class="fas fa-bell"></i> 提醒我
+                    </button>
+                </div>
+            </div>
+            
+            <div class="day-timeline">
+                <div class="timeline-hour">
+                    <div class="timeline-time">9:00</div>
+                    <div class="timeline-content">
+                        <div class="timeline-line"></div>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-task" style="background-color: rgba(144, 202, 249, 0.3);">
+                            厨房清洁 (小王)
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-hour">
+                    <div class="timeline-time">12:00</div>
+                    <div class="timeline-content">
+                        <div class="timeline-line"></div>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-task" style="background-color: rgba(255, 224, 130, 0.3);">
+                            整理冰箱 (小张)
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-hour">
+                    <div class="timeline-time">18:00</div>
+                    <div class="timeline-content">
+                        <div class="timeline-line"></div>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-task" style="background-color: rgba(255, 224, 130, 0.3);">
+                            聚餐 (全体)
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-hour">
+                    <div class="timeline-time">21:00</div>
+                    <div class="timeline-content">
+                        <div class="timeline-line"></div>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-task" style="background-color: rgba(144, 202, 249, 0.3);">
+                            倒垃圾 (小李)
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="margin-top: 15px; display: flex; flex-wrap: wrap; gap: 5px;">
+            <div class="task-tag cleaning">清洁</div>
+            <div class="task-tag shopping">采购</div>
+            <div class="task-tag bills">缴费</div>
+            <div class="task-tag" style="background-color: orange; color: white;">社交</div>
+            <div class="task-tag" style="background-color: #E57373; color: white;">
+                <i class="fas fa-gift" style="margin-right: 3px;"></i>纪念日
+            </div>
+        </div>
+
+        <div style="display: flex; gap: 10px; margin-top: 20px;">
+            <button class="btn" style="flex: 1;">
+                <i class="fas fa-plus"></i> 添加任务
+            </button>
+            <button class="btn" style="flex: 1; background-color: #E57373;">
+                <i class="fas fa-gift"></i> 添加纪念日
+            </button>
+        </div>
+    </div>
+    <div class="nav-tabs">
+        <div class="nav-tab">
+            <i class="fas fa-tasks"></i>
+            <span>待办</span>
+        </div>
+        <div class="nav-tab active">
+            <i class="fas fa-calendar"></i>
+            <span>日历</span>
+        </div>
+        <div class="nav-tab">
+            <i class="fas fa-plus-circle"></i>
+            <span>添加</span>
+        </div>
+        <div class="nav-tab">
+            <i class="fas fa-chart-bar"></i>
+            <span>统计</span>
+        </div>
+        <div class="nav-tab"></div>
+            <i class="fas fa-user"></i>
+            <span>我的</span>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,72 @@
+<div class="prototype">
+    <div class="screen-title">转交任务</div>
+    <div class="header">
+        <div><i class="fas fa-arrow-left"></i></div>
+        <div>转交任务</div>
+        <div><i class="fas fa-check"></i></div>
+    </div>
+    <div class="content notion-container">
+        <div class="notion-panel">
+            <div style="display: flex; align-items: center; margin-bottom: 16px;">
+                <div class="notion-task-indicator" style="background-color: var(--blue);"></div>
+                <div style="font-weight: 500; font-size: 16px;">客厅扫地</div>
+            </div>
+            
+            <div style="display: flex; margin-bottom: 16px;">
+                <div style="width: 80px; color: #777; font-size: 13px;">当前执行人</div>
+                <div style="flex: 1; display: flex; align-items: center;">
+                    <div class="notion-avatar" style="background-color: var(--primary);">王</div>
+                    <div style="margin-left: 8px;">小王</div>
+                </div>
+            </div>
+            
+            <div style="display: flex; margin-bottom: 16px;">
+                <div style="width: 80px; color: #777; font-size: 13px;">执行时间</div>
+                <div style="flex: 1;">今日 18:30</div>
+            </div>
+        </div>
+        
+        <div class="notion-section">
+            <div class="notion-section-title">选择转交对象</div>
+            
+            <div class="notion-user-item">
+                <div class="notion-avatar" style="background-color: var(--secondary);">张</div>
+                <div class="notion-user-info">
+                    <div class="notion-user-name">小张</div>
+                    <div class="notion-user-status">今日任务: 1个</div>
+                </div>
+                <div><i class="far fa-circle"></i></div>
+            </div>
+            
+            <div class="notion-user-item selected">
+                <div class="notion-avatar" style="background-color: var(--accent);">李</div>
+                <div class="notion-user-info">
+                    <div class="notion-user-name">小李</div>
+                    <div class="notion-user-status">今日任务: 0个</div>
+                </div>
+                <div><i class="fas fa-check-circle"></i></div>
+            </div>
+        </div>
+        
+        <div class="notion-form-group">
+            <div class="notion-label">转交原因</div>
+            <select class="notion-select">
+                <option>临时加班</option>
+                <option>身体不适</option>
+                <option>时间冲突</option>
+                <option>外出</option>
+                <option>其他</option>
+            </select>
+        </div>
+        
+        <div class="notion-form-group">
+            <div class="notion-label">补充说明（选填）</div>
+            <textarea class="notion-input" placeholder="添加额外说明..." rows="3">今天要加班到很晚，可能没时间做这个任务，麻烦帮忙。</textarea>
+        </div>
+        
+        <button class="notion-btn primary" style="width: 100%;">确认转交</button>
+        <div style="text-align: center; margin-top: 15px; color: #777; font-size: 12px;">
+            对方接受后，任务将正式转交
+        </div>
+    </div>
+</div>

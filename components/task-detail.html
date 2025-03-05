@@ -1,0 +1,103 @@
+<div class="prototype">
+    <div class="screen-title">任务详情</div>
+    <div class="header">
+        <div><i class="fas fa-arrow-left"></i></div>
+        <div>任务详情</div>
+        <div><i class="fas fa-ellipsis-v"></i></div>
+    </div>
+    <div class="content notion-container">
+        <div class="notion-header">
+            <div class="notion-title">客厅扫地</div>
+            <div class="notion-badge" style="background-color: rgba(144, 202, 249, 0.3); color: #1976d2;">清洁</div>
+        </div>
+        
+        <div class="notion-panel">
+            <div style="display: flex; margin-bottom: 16px;">
+                <div style="width: 100px; color: #777; font-size: 13px;">执行人</div>
+                <div style="flex: 1; display: flex; align-items: center;">
+                    <div class="notion-avatar" style="background-color: var(--primary);">王</div>
+                    <div style="margin-left: 8px;">小王</div>
+                </div>
+            </div>
+            
+            <div style="display: flex; margin-bottom: 16px;">
+                <div style="width: 100px; color: #777; font-size: 13px;">执行时间</div>
+                <div style="flex: 1;">2023年3月15日 18:30</div>
+            </div>
+            
+            <div style="display: flex; margin-bottom: 16px;">
+                <div style="width: 100px; color: #777; font-size: 13px;">重复</div>
+                <div style="flex: 1;">每周三</div>
+            </div>
+            
+            <div style="display: flex; margin-bottom: 8px;">
+                <div style="width: 100px; color: #777; font-size: 13px;">状态</div>
+                <div style="flex: 1;">
+                    <span class="notion-badge" style="background-color: #E3F2FD; color: #1976d2;">进行中</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="notion-section">
+            <div class="notion-section-title">
+                <i class="fas fa-history"></i> 历史记录
+            </div>
+            
+            <div class="notion-panel" style="padding-left: 0; padding-right: 0;">
+                <div class="notion-history-item">
+                    <div class="notion-history-dot" style="background-color: #4CAF50;"></div>
+                    <div class="notion-history-content">
+                        <div class="notion-history-title">小王完成了任务</div>
+                        <div class="notion-history-meta">2023年3月8日 19:05</div>
+                    </div>
+                </div>
+                
+                <div class="notion-history-item">
+                    <div class="notion-history-dot" style="background-color: #FF9800;"></div>
+                    <div class="notion-history-content">
+                        <div class="notion-history-title">小张代劳完成</div>
+                        <div class="notion-history-meta">2023年3月1日 19:30 · 原因：小王出差</div>
+                    </div>
+                </div>
+                
+                <div class="notion-history-item">
+                    <div class="notion-history-dot" style="background-color: #F44336;"></div>
+                    <div class="notion-history-content">
+                        <div class="notion-history-title">逾期未完成</div>
+                        <div class="notion-history-meta">2023年2月22日 · 小李协助完成</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="background-color: rgba(255, 224, 130, 0.3); border-left: 3px solid var(--yellow); padding: 10px; margin-top: 16px; border-radius: 4px; font-size: 14px;">
+                <i class="fas fa-comment"></i> 小李的感谢便签：今天垃圾有点重，辛苦啦！
+            </div>
+        </div>
+        
+        <div class="notion-section">
+            <div class="notion-section-title">
+                <i class="fas fa-comment-alt"></i> 添加备注
+            </div>
+            
+            <textarea class="notion-input" placeholder="有什么想说的..." rows="3"></textarea>
+            
+            <div style="display: flex; justify-content: space-between; margin-top: 12px;">
+                <button class="notion-btn">
+                    <i class="fas fa-camera"></i> 上传照片
+                </button>
+                <button class="notion-btn primary">
+                    <i class="fas fa-paper-plane"></i> 发送
+                </button>
+            </div>
+        </div>
+        
+        <div style="display: flex; justify-content: space-between; margin-top: 20px;">
+            <button class="notion-btn primary">
+                <i class="fas fa-check"></i> 标记完成
+            </button>
+            <button class="notion-btn">
+                <i class="fas fa-exchange-alt"></i> 转交任务
+            </button>
+        </div>
+    </div>
+</div>

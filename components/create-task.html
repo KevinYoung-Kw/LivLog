@@ -1,0 +1,268 @@
+<div class="prototype">
+    <div class="screen-title">任务创建</div>
+    <div class="header">
+        <div><i class="fas fa-arrow-left"></i></div>
+        <div>创建新任务</div>
+        <div><i class="fas fa-check"></i></div>
+    </div>
+    <div class="content notion-container">
+        <div class="notion-tabs">
+            <div class="notion-tab active">常规任务</div>
+            <div class="notion-tab">纪念日</div>
+        </div>
+        
+        <div class="notion-panel">
+            <div class="notion-form-group">
+                <input type="text" class="notion-input" placeholder="输入任务名称..." style="font-weight: 500; font-size: 16px; border: none; padding: 0 0 8px 0; border-bottom: 1px solid #eee;">
+            </div>
+            
+            <div class="notion-form-group">
+                <div class="notion-label">任务类型</div>
+                <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                    <div class="notion-btn" style="background-color: rgba(144, 202, 249, 0.2); border-color: var(--blue);">
+                        <div style="width: 8px; height: 8px; border-radius: 50%; background-color: var(--blue); margin-right: 6px;"></div>
+                        清洁
+                    </div>
+                    <div class="notion-btn">
+                        <div style="width: 8px; height: 8px; border-radius: 50%; background-color: var(--green); margin-right: 6px;"></div>
+                        采购
+                    </div>
+                    <div class="notion-btn">
+                        <div style="width: 8px; height: 8px; border-radius: 50%; background-color: var(--red); margin-right: 6px;"></div>
+                        缴费
+                    </div>
+                    <div class="notion-btn">
+                        <div style="width: 8px; height: 8px; border-radius: 50%; background-color: var(--yellow); margin-right: 6px;"></div>
+                        社交
+                    </div>
+                </div>
+            </div>
+            
+            <div id="standard-task-form">
+                <div class="notion-form-group">
+                    <div class="notion-label">执行人</div>
+                    <div class="notion-user-item selected">
+                        <div class="notion-avatar" style="background-color: var(--primary);">王</div>
+                        <div class="notion-user-info">
+                            <div class="notion-user-name">小王</div>
+                            <div class="notion-user-status">今日任务: 2个</div>
+                        </div>
+                        <div><i class="fas fa-check"></i></div>
+                    </div>
+                    
+                    <div class="notion-user-item">
+                        <div class="notion-avatar" style="background-color: var(--secondary);">张</div>
+                        <div class="notion-user-info">
+                            <div class="notion-user-name">小张</div>
+                            <div class="notion-user-status">今日任务: 1个</div>
+                        </div>
+                    </div>
+                    
+                    <div class="notion-user-item">
+                        <div class="notion-avatar" style="background-color: var(--accent);">李</div>
+                        <div class="notion-user-info">
+                            <div class="notion-user-name">小李</div>
+                            <div class="notion-user-status">今日任务: 0个</div>
+                        </div>
+                    </div>
+                    
+                    <div class="notion-user-item">
+                        <div class="notion-avatar" style="background-color: #777;"><i class="fas fa-sync-alt"></i></div>
+                        <div class="notion-user-info">
+                            <div class="notion-user-name">自动轮换</div>
+                            <div class="notion-user-status">按顺序分配给所有成员</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="notion-form-group">
+                    <div class="notion-label">执行时间</div>
+                    <input type="text" class="notion-input" value="2023-03-18 16:00">
+                </div>
+                
+                <div class="notion-form-group">
+                    <div class="notion-label">重复</div>
+                    <select class="notion-select">
+                        <option>不重复</option>
+                        <option>每天</option>
+                        <option>每周</option>
+                        <option>每月</option>
+                    </select>
+                </div>
+                
+                <div class="notion-form-group">
+                    <div class="notion-label">提醒时间</div>
+                    <select class="notion-select">
+                        <option>执行前30分钟</option>
+                        <option>执行前1小时</option>
+                        <option>执行前1天</option>
+                        <option>不提醒</option>
+                    </select>
+                </div>
+                
+                <div class="notion-form-group">
+                    <div class="notion-label">任务备注（选填）</div>
+                    <textarea class="notion-input" placeholder="添加任务的额外信息..." rows="3"></textarea>
+                </div>
+            </div>
+            
+            <div id="memorial-day-form" style="display: none;">
+                <div class="notion-form-group">
+                    <div class="notion-label">纪念日类型</div>
+                    <select class="notion-select">
+                        <option>生日</option>
+                        <option>入住纪念日</option>
+                        <option>结婚纪念日</option>
+                        <option>认识纪念日</option>
+                        <option>其他</option>
+                    </select>
+                </div>
+                
+                <div class="notion-form-group">
+                    <div class="notion-label">日期</div>
+                    <input type="text" class="notion-input" value="2023-05-20">
+                </div>
+                
+                <div class="notion-form-group">
+                    <div class="notion-label">关联成员</div>
+                    <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                        <div class="notion-user-item selected" style="flex: 0 0 calc(50% - 4px);">
+                            <div class="notion-avatar" style="background-color: var(--primary);">王</div>
+                            <div class="notion-user-info">
+                                <div class="notion-user-name">小王</div>
+                            </div>
+                            <div><i class="fas fa-check"></i></div>
+                        </div>
+                        
+                        <div class="notion-user-item" style="flex: 0 0 calc(50% - 4px);">
+                            <div class="notion-avatar" style="background-color: var(--secondary);">张</div>
+                            <div class="notion-user-info">
+                                <div class="notion-user-name">小张</div>
+                            </div>
+                        </div>
+                        
+                        <div class="notion-user-item" style="flex: 0 0 calc(50% - 4px);">
+                            <div class="notion-avatar" style="background-color: var(--accent);">李</div>
+                            <div class="notion-user-info">
+                                <div class="notion-user-name">小李</div>
+                            </div>
+                        </div>
+                        
+                        <div class="notion-user-item" style="flex: 0 0 calc(50% - 4px);">
+                            <div class="notion-avatar" style="background-color: #777;"><i class="fas fa-users"></i></div>
+                            <div class="notion-user-info">
+                                <div class="notion-user-name">全体成员</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="notion-form-group">
+                    <div class="notion-label">提前提醒</div>
+                    <select class="notion-select">
+                        <option>当天提醒</option>
+                        <option>提前1天</option>
+                        <option>提前3天</option>
+                        <option>提前1周</option>
+                    </select>
+                </div>
+                
+                <div class="notion-form-group">
+                    <div class="notion-label">重复</div>
+                    <select class="notion-select">
+                        <option>每年</option>
+                        <option>不重复</option>
+                    </select>
+                </div>
+                
+                <div class="notion-form-group">
+                    <div class="notion-label">特别备注</div>
+                    <textarea class="notion-input" placeholder="添加关于这个纪念日的特别说明..." rows="3"></textarea>
+                </div>
+                
+                <div class="notion-form-group">
+                    <div class="notion-label">纪念日图标</div>
+                    <div style="display: flex; gap: 10px;">
+                        <div class="notion-btn" style="flex: 1; justify-content: center;">
+                            <i class="fas fa-birthday-cake" style="margin-right: 0; color: #E57373;"></i>
+                        </div>
+                        <div class="notion-btn" style="flex: 1; justify-content: center;">
+                            <i class="fas fa-home" style="margin-right: 0; color: #4FC3F7;"></i>
+                        </div>
+                        <div class="notion-btn" style="flex: 1; justify-content: center;">
+                            <i class="fas fa-heart" style="margin-right: 0; color: #E57373;"></i>
+                        </div>
+                        <div class="notion-btn" style="flex: 1; justify-content: center;">
+                            <i class="fas fa-glass-cheers" style="margin-right: 0; color: #FFB74D;"></i>
+                        </div>
+                        <div class="notion-btn" style="flex: 1; justify-content: center;">
+                            <i class="fas fa-star" style="margin-right: 0; color: #FFD54F;"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="notion-section">
+            <div class="notion-section-title">
+                <i class="fas fa-bookmark"></i> 从模板中选择
+            </div>
+            
+            <div class="notion-task-card">
+                <div class="notion-task-title">
+                    <i class="fas fa-broom" style="color: var(--blue); margin-right: 8px;"></i>
+                    每周清洁
+                </div>
+                <div class="notion-task-meta">包含客厅、厨房、卫生间清洁任务</div>
+            </div>
+            
+            <div class="notion-task-card">
+                <div class="notion-task-title">
+                    <i class="fas fa-shopping-basket" style="color: var(--green); margin-right: 8px;"></i>
+                    每月采购
+                </div>
+                <div class="notion-task-meta">包含日用品、食材等采购任务</div>
+            </div>
+            
+            <div class="notion-task-card">
+                <div class="notion-task-title">
+                    <i class="fas fa-money-bill-wave" style="color: var(--red); margin-right: 8px;"></i>
+                    定期缴费
+                </div>
+                <div class="notion-task-meta">包含水电费、宽带费等缴纳任务</div>
+            </div>
+        </div>
+        
+        <div style="text-align: center; padding: 20px 0;">
+            <button class="notion-btn primary">
+                <i class="fas fa-check"></i> 创建任务
+            </button>
+        </div>
+    </div>
+</div>
+
+<script>
+// 简单演示切换表单
+document.addEventListener('DOMContentLoaded', function() {
+    const tabs = document.querySelectorAll('.notion-tab');
+    const standardForm = document.getElementById('standard-task-form');
+    const memorialForm = document.getElementById('memorial-day-form');
+    
+    tabs.forEach((tab, index) => {
+        tab.addEventListener('click', function() {
+            // 切换激活选项卡
+            tabs.forEach(t => t.classList.remove('active'));
+            this.classList.add('active');
+            
+            // 显示对应表单
+            if (index === 0) {
+                standardForm.style.display = 'block';
+                memorialForm.style.display = 'none';
+            } else {
+                standardForm.style.display = 'none';
+                memorialForm.style.display = 'block';
+            }
+        });
+    });
+});
+</script>

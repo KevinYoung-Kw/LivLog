@@ -1,0 +1,292 @@
+<div class="prototype">
+    <div class="screen-title">可视化看板</div>
+    <div class="header">
+        <div><i class="fas fa-arrow-left"></i></div>
+        <div>数据统计</div>
+        <div><i class="fas fa-download"></i></div>
+    </div>
+    <div class="content notion-container">
+        <!-- 时间筛选 -->
+        <div class="notion-tabs" style="margin-bottom: 16px;">
+            <div class="notion-tab active">近7天</div>
+            <div class="notion-tab">近30天</div>
+            <div class="notion-tab">全部</div>
+            <div class="notion-tab" style="margin-left: auto;">
+                <i class="fas fa-calendar"></i> 自定义
+            </div>
+        </div>
+
+        <!-- 关键指标 -->
+        <div class="notion-section">
+            <div class="notion-section-title">
+                <i class="fas fa-tachometer-alt"></i> 关键指标
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;">
+                <div class="notion-panel" style="padding: 12px; text-align: center;">
+                    <div style="color: var(--primary); font-size: 24px; font-weight: 600;">43</div>
+                    <div style="color: #777; font-size: 13px;">总任务数</div>
+                </div>
+                <div class="notion-panel" style="padding: 12px; text-align: center;">
+                    <div style="color: #4CAF50; font-size: 24px; font-weight: 600;">86%</div>
+                    <div style="color: #777; font-size: 13px;">按时完成率</div>
+                </div>
+                <div class="notion-panel" style="padding: 12px; text-align: center;">
+                    <div style="color: #FF9800; font-size: 24px; font-weight: 600;">7</div>
+                    <div style="color: #777; font-size: 13px;">任务转交次数</div>
+                </div>
+                <div class="notion-panel" style="padding: 12px; text-align: center;">
+                    <div style="color: #F44336; font-size: 24px; font-weight: 600;">5</div>
+                    <div style="color: #777; font-size: 13px;">任务逾期次数</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 成员贡献 -->
+        <div class="notion-section">
+            <div class="notion-section-title">
+                <i class="fas fa-users"></i> 成员贡献趋势
+            </div>
+            <div class="notion-panel">
+                <!-- 使用主题色系的活动热图 -->
+                <div style="margin-bottom: 15px;">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                        <div style="font-size: 12px; color: #777;">五月</div>
+                        <div style="font-size: 12px; color: #777;">六月</div>
+                    </div>
+                    <div style="display: grid; grid-template-columns: repeat(28, 1fr); gap: 2px;">
+                        <!-- 模拟热图，使用主题色系 -->
+                        <!-- 第一行 -->
+                        <div style="height: 12px; background-color: #f0f0f0; border-radius: 2px;"></div>
+                        <div style="height: 12px; background-color: #f0f0f0; border-radius: 2px;"></div>
+                        <div style="height: 12px; background-color: #FFE0D0; border-radius: 2px;"></div>
+                        <div style="height: 12px; background-color: #FFC38B; border-radius: 2px;"></div>
+                        <div style="height: 12px; background-color: #FFE0D0; border-radius: 2px;"></div>
+                        <div style="height: 12px; background-color: #f0f0f0; border-radius: 2px;"></div>
+                        <div style="height: 12px; background-color: #f0f0f0; border-radius: 2px;"></div>
+                        <!-- 第二行 -->
+                        <div style="height: 12px; background-color: #f0f0f0; border-radius: 2px;"></div>
+                        <div style="height: 12px; background-color: #FFE0D0; border-radius: 2px;"></div>
+                        <div style="height: 12px; background-color: #FFC38B; border-radius: 2px;"></div>
+                        <div style="height: 12px; background-color: #FF9E7D; border-radius: 2px;"></div>
+                        <div style="height: 12px; background-color: #FFC38B; border-radius: 2px;"></div>
+                        <div style="height: 12px; background-color: #FFE0D0; border-radius: 2px;"></div>
+                        <div style="height: 12px; background-color: #f0f0f0; border-radius: 2px;"></div>
+                        <!-- 第三行 -->
+                        <div style="height: 12px; background-color: #FFE0D0; border-radius: 2px;"></div>
+                        <div style="height: 12px; background-color: #FFC38B; border-radius: 2px;"></div>
+                        <div style="height: 12px; background-color: #E68C6C; border-radius: 2px;"></div>
+                        <div style="height: 12px; background-color: #FFC38B; border-radius: 2px;"></div>
+                        <div style="height: 12px; background-color: #FF9E7D; border-radius: 2px;"></div>
+                        <div style="height: 12px; background-color: #FFC38B; border-radius: 2px;"></div>
+                        <div style="height: 12px; background-color: #FFE0D0; border-radius: 2px;"></div>
+                        <!-- 第四行 -->
+                        <div style="height: 12px; background-color: #f0f0f0; border-radius: 2px;"></div>
+                        <div style="height: 12px; background-color: #FFE0D0; border-radius: 2px;"></div>
+                        <div style="height: 12px; background-color: #FFC38B; border-radius: 2px;"></div>
+                        <div style="height: 12px; background-color: #FF9E7D; border-radius: 2px;"></div>
+                        <div style="height: 12px; background-color: #FFE0D0; border-radius: 2px;"></div>
+                        <div style="height: 12px; background-color: #f0f0f0; border-radius: 2px;"></div>
+                        <div style="height: 12px; background-color: #f0f0f0; border-radius: 2px;"></div>
+                    </div>
+                    <div style="display: flex; justify-content: flex-end; margin-top: 5px;">
+                        <div style="display: flex; align-items: center; font-size: 12px; color: #777;">
+                            <span style="margin-right: 5px;">少</span>
+                            <div style="height: 10px; width: 10px; background-color: #f0f0f0; margin-right: 2px;"></div>
+                            <div style="height: 10px; width: 10px; background-color: #FFE0D0; margin-right: 2px;"></div>
+                            <div style="height: 10px; width: 10px; background-color: #FFC38B; margin-right: 2px;"></div>
+                            <div style="height: 10px; width: 10px; background-color: #FF9E7D; margin-right: 2px;"></div>
+                            <div style="height: 10px; width: 10px; background-color: #E68C6C; margin-right: 5px;"></div>
+                            <span>多</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 成员贡献柱状图 -->
+            <div class="notion-panel" style="margin-top: 16px;">
+                <div style="height: 40px; display: flex; align-items: flex-end; justify-content: space-around;">
+                    <div style="display: flex; flex-direction: column; align-items: center;">
+                        <div style="width: 40px; height: 80%; background-color: var(--primary); border-radius: 4px 4px 0 0;"></div>
+                        <div style="margin-top: 8px; font-size: 13px; font-weight: 500;">小王</div>
+                        <div style="font-size: 12px; color: #777;">16次</div>
+                    </div>
+                    <div style="display: flex; flex-direction: column; align-items: center;">
+                        <div style="width: 40px; height: 60%; background-color: var(--secondary); border-radius: 4px 4px 0 0;"></div>
+                        <div style="margin-top: 8px; font-size: 13px; font-weight: 500;">小张</div>
+                        <div style="font-size: 12px; color: #777;">12次</div>
+                    </div>
+                    <div style="display: flex; flex-direction: column; align-items: center;">
+                        <div style="width: 40px; height: 75%; background-color: var(--accent); border-radius: 4px 4px 0 0;"></div>
+                        <div style="margin-top: 8px; font-size: 13px; font-weight: 500;">小李</div>
+                        <div style="font-size: 12px; color: #777;">15次</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 任务类型分布 -->
+        <div class="notion-section">
+            <div class="notion-section-title">
+                <i class="fas fa-chart-pie"></i> 任务类型分布
+            </div>
+            <div class="notion-panel">
+                <div style="display: flex; gap: 15px; align-items: center; margin: 10px 0;">
+                    <!-- 左侧环形图 -->
+                    <div style="position: relative; width: 120px; height: 120px; flex-shrink: 0;">
+                        <!-- 模拟环形图，使用多个圆形扇区 -->
+                        <div style="position: absolute; width: 100%; height: 100%; border-radius: 50%; background: conic-gradient(
+                            var(--blue) 0% 40%,
+                            var(--green) 40% 70%,
+                            var(--red) 70% 90%,
+                            var(--yellow) 90% 100%
+                        );"></div>
+                        <div style="position: absolute; width: 60%; height: 60%; background: white; border-radius: 50%; top: 20%; left: 20%;"></div>
+                    </div>
+                    
+                    <!-- 右侧图例 -->
+                    <div style="flex: 1;">
+                        <div class="notion-stat-item">
+                            <div class="notion-stat-color" style="background-color: var(--blue);"></div>
+                            <div class="notion-stat-label">清洁</div>
+                            <div class="notion-stat-value">40%</div>
+                        </div>
+                        <div class="notion-stat-item">
+                            <div class="notion-stat-color" style="background-color: var(--green);"></div>
+                            <div class="notion-stat-label">采购</div>
+                            <div class="notion-stat-value">30%</div>
+                        </div>
+                        <div class="notion-stat-item">
+                            <div class="notion-stat-color" style="background-color: var(--red);"></div>
+                            <div class="notion-stat-label">缴费</div>
+                            <div class="notion-stat-value">20%</div>
+                        </div>
+                        <div class="notion-stat-item">
+                            <div class="notion-stat-color" style="background-color: var(--yellow);"></div>
+                            <div class="notion-stat-label">社交</div>
+                            <div class="notion-stat-value">10%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 协作指标 -->
+        <div class="notion-section">
+            <div class="notion-section-title">
+                <i class="fas fa-handshake"></i> 协作指标
+            </div>
+            <div class="notion-panel" style="padding: 10px;">
+                <table style="width: 100%; border-collapse: collapse;">
+                    <thead>
+                        <tr style="border-bottom: 1px solid #eee;">
+                            <th style="text-align: left; padding: 8px 10px; font-weight: 500; color: #777;">成员</th>
+                            <th style="text-align: center; padding: 8px 5px; font-weight: 500; color: #777;">接收转交</th>
+                            <th style="text-align: center; padding: 8px 5px; font-weight: 500; color: #777;">发起转交</th>
+                            <th style="text-align: center; padding: 8px 5px; font-weight: 500; color: #777;">协助他人</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-bottom: 1px solid #f5f5f5;">
+                            <td style="padding: 12px 10px; display: flex; align-items: center;">
+                                <div class="notion-avatar" style="background-color: var(--primary); margin-right: 8px;">王</div>
+                                小王
+                            </td>
+                            <td style="text-align: center; padding: 12px 5px;">3</td>
+                            <td style="text-align: center; padding: 12px 5px;">2</td>
+                            <td style="text-align: center; padding: 12px 5px; color: #4CAF50; font-weight: 500;">5</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #f5f5f5;">
+                            <td style="padding: 12px 10px; display: flex; align-items: center;">
+                                <div class="notion-avatar" style="background-color: var(--secondary); margin-right: 8px;">张</div>
+                                小张
+                            </td>
+                            <td style="text-align: center; padding: 12px 5px;">2</td>
+                            <td style="text-align: center; padding: 12px 5px;">3</td>
+                            <td style="text-align: center; padding: 12px 5px;">2</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 12px 10px; display: flex; align-items: center;">
+                                <div class="notion-avatar" style="background-color: var(--accent); margin-right: 8px;">李</div>
+                                小李
+                            </td>
+                            <td style="text-align: center; padding: 12px 5px;">2</td>
+                            <td style="text-align: center; padding: 12px 5px;">2</td>
+                            <td style="text-align: center; padding: 12px 5px;">3</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <!-- 任务完成时间分布 -->
+        <div class="notion-section">
+            <div class="notion-section-title">
+                <i class="fas fa-clock"></i> 完成时间分布
+            </div>
+            <div class="notion-panel">
+                <!-- 简化的时间分布图 -->
+                <div style="height: 120px; display: flex; align-items: flex-end; margin-bottom: 5px;">
+                    <div style="flex: 1; height: 30%; background-color: rgba(255, 158, 125, 0.3); margin: 0 1px;"></div>
+                    <div style="flex: 1; height: 50%; background-color: rgba(255, 158, 125, 0.5); margin: 0 1px;"></div>
+                    <div style="flex: 1; height: 70%; background-color: rgba(255, 158, 125, 0.7); margin: 0 1px;"></div>
+                    <div style="flex: 1; height: 100%; background-color: var(--primary); margin: 0 1px;"></div>
+                    <div style="flex: 1; height: 60%; background-color: rgba(255, 158, 125, 0.7); margin: 0 1px;"></div>
+                    <div style="flex: 1; height: 40%; background-color: rgba(255, 158, 125, 0.5); margin: 0 1px;"></div>
+                    <div style="flex: 1; height: 20%; background-color: rgba(255, 158, 125, 0.3); margin: 0 1px;"></div>
+                </div>
+                
+                <!-- 时间标签 -->
+                <div style="display: flex; margin-bottom: 10px;">
+                    <div style="flex: 1; text-align: center; font-size: 11px; color: #777;">6-9</div>
+                    <div style="flex: 1; text-align: center; font-size: 11px; color: #777;">9-12</div>
+                    <div style="flex: 1; text-align: center; font-size: 11px; color: #777;">12-15</div>
+                    <div style="flex: 1; text-align: center; font-size: 11px; color: #777;">15-18</div>
+                    <div style="flex: 1; text-align: center; font-size: 11px; color: #777;">18-21</div>
+                    <div style="flex: 1; text-align: center; font-size: 11px; color: #777;">21-24</div>
+                    <div style="flex: 1; text-align: center; font-size: 11px; color: #777;">0-6</div>
+                </div>
+                
+                <div style="display: flex; justify-content: space-between; padding-top: 10px; border-top: 1px solid #eee;">
+                    <div>
+                        <div style="font-size: 13px; color: #777;">任务高峰期</div>
+                        <div style="font-weight: 500;">15:00-18:00</div>
+                    </div>
+                    <div style="text-align: right;">
+                        <div style="font-size: 13px; color: #777;">平均完成时间</div>
+                        <div style="font-weight: 500;">17分钟</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 底部导出按钮 -->
+        <div style="padding: 20px 0; text-align: center;">
+            <button class="notion-btn primary">
+                <i class="fas fa-file-pdf"></i> 导出月度报告
+            </button>
+        </div>
+    </div>
+    
+    <div class="nav-tabs">
+        <div class="nav-tab">
+            <i class="fas fa-tasks"></i>
+            <span>待办</span>
+        </div>
+        <div class="nav-tab">
+            <i class="fas fa-calendar"></i>
+            <span>日历</span>
+        </div>
+        <div class="nav-tab">
+            <i class="fas fa-plus-circle"></i>
+            <span>添加</span>
+        </div>
+        <div class="nav-tab active">
+            <i class="fas fa-chart-bar"></i>
+            <span>统计</span>
+        </div>
+        <div class="nav-tab">
+            <i class="fas fa-user"></i>
+            <span>我的</span>
+        </div>
+    </div>
+</div>
