@@ -41,13 +41,13 @@
             <div id="standard-task-form">
                 <div class="notion-form-group">
                     <div class="notion-label">执行人</div>
-                    <div class="notion-user-item selected">
+                    <div class="notion-user-item">
                         <div class="notion-avatar" style="background-color: var(--primary);">王</div>
                         <div class="notion-user-info">
                             <div class="notion-user-name">小王</div>
                             <div class="notion-user-status">今日任务: 2个</div>
                         </div>
-                        <div><i class="fas fa-check"></i></div>
+                        <div><i class="far fa-circle"></i></div>
                     </div>
                     
                     <div class="notion-user-item">
@@ -56,6 +56,7 @@
                             <div class="notion-user-name">小张</div>
                             <div class="notion-user-status">今日任务: 1个</div>
                         </div>
+                        <div><i class="far fa-circle"></i></div>
                     </div>
                     
                     <div class="notion-user-item">
@@ -64,13 +65,76 @@
                             <div class="notion-user-name">小李</div>
                             <div class="notion-user-status">今日任务: 0个</div>
                         </div>
+                        <div><i class="far fa-circle"></i></div>
                     </div>
                     
-                    <div class="notion-user-item">
+                    <div class="notion-user-item selected" id="auto-rotation-option">
                         <div class="notion-avatar" style="background-color: #777;"><i class="fas fa-sync-alt"></i></div>
                         <div class="notion-user-info">
                             <div class="notion-user-name">自动轮换</div>
                             <div class="notion-user-status">按顺序分配给所有成员</div>
+                        </div>
+                        <div><i class="fas fa-check-circle"></i></div>
+                    </div>
+                </div>
+                
+                <!-- 自动轮换设置面板 - 新增部分 -->
+                <div id="rotation-settings-panel" class="notion-panel" style="margin-top: -8px; margin-bottom: 16px; background-color: #f9f9f9; border: 1px solid #eee;">
+                    <div style="font-weight: 500; margin-bottom: 12px; display: flex; align-items: center;">
+                        <i class="fas fa-cog" style="color: #777; margin-right: 6px;"></i> 自动轮换设置
+                    </div>
+                    
+                    <div class="notion-form-group">
+                        <div class="notion-label">轮换顺序</div>
+                        <div style="background-color: white; border: 1px solid #e0e0e0; border-radius: 3px; padding: 8px;">
+                            <div style="display: flex; align-items: center; margin-bottom: 8px;">
+                                <div style="width: 24px; color: #999; margin-right: 8px;">1</div>
+                                <div class="notion-avatar" style="background-color: var(--primary); width: 24px; height: 24px; font-size: 10px;">王</div>
+                                <div style="margin-left: 8px; flex: 1;">小王</div>
+                                <div><i class="fas fa-grip-lines" style="color: #ccc;"></i></div>
+                            </div>
+                            
+                            <div style="display: flex; align-items: center; margin-bottom: 8px;">
+                                <div style="width: 24px; color: #999; margin-right: 8px;">2</div>
+                                <div class="notion-avatar" style="background-color: var(--secondary); width: 24px; height: 24px; font-size: 10px;">张</div>
+                                <div style="margin-left: 8px; flex: 1;">小张</div>
+                                <div><i class="fas fa-grip-lines" style="color: #ccc;"></i></div>
+                            </div>
+                            
+                            <div style="display: flex; align-items: center;">
+                                <div style="width: 24px; color: #999; margin-right: 8px;">3</div>
+                                <div class="notion-avatar" style="background-color: var(--accent); width: 24px; height: 24px; font-size: 10px;">李</div>
+                                <div style="margin-left: 8px; flex: 1;">小李</div>
+                                <div><i class="fas fa-grip-lines" style="color: #ccc;"></i></div>
+                            </div>
+                            
+                            <div style="color: #777; font-size: 12px; margin-top: 8px; text-align: center;">
+                                <i class="fas fa-info-circle"></i> 拖动调整成员轮换顺序
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="notion-form-group">
+                        <div class="notion-label">轮换规则</div>
+                        <div class="notion-tabs" style="margin-bottom: 10px; border: none;">
+                            <div class="notion-tab active">每次</div>
+                            <div class="notion-tab">每周</div>
+                            <div class="notion-tab">每月</div>
+                        </div>
+                        
+                        <div style="font-size: 13px; color: #777; background-color: rgba(255, 224, 130, 0.2); padding: 8px; border-radius: 4px;">
+                            <i class="fas fa-lightbulb" style="color: #FFB74D;"></i> 
+                            每次任务完成后，下次执行自动分配给下一位成员
+                        </div>
+                    </div>
+                    
+                    <div class="notion-form-group" style="margin-bottom: 0;">
+                        <div style="display: flex; align-items: center;">
+                            <input type="checkbox" id="smart-balance" checked style="width: auto; margin-right: 10px;">
+                            <label for="smart-balance" style="margin: 0;">智能负载平衡</label>
+                        </div>
+                        <div style="font-size: 12px; color: #777; margin-top: 4px; margin-left: 24px;">
+                            考虑成员当前任务数量，避免分配不均
                         </div>
                     </div>
                 </div>
@@ -242,8 +306,8 @@
 </div>
 
 <script>
-// 简单演示切换表单
 document.addEventListener('DOMContentLoaded', function() {
+    // 现有的表单切换代码
     const tabs = document.querySelectorAll('.notion-tab');
     const standardForm = document.getElementById('standard-task-form');
     const memorialForm = document.getElementById('memorial-day-form');
@@ -261,6 +325,62 @@ document.addEventListener('DOMContentLoaded', function() {
             } else {
                 standardForm.style.display = 'none';
                 memorialForm.style.display = 'block';
+            }
+        });
+    });
+    
+    // 自动轮换设置展示逻辑
+    const rotationOption = document.getElementById('auto-rotation-option');
+    const rotationPanel = document.getElementById('rotation-settings-panel');
+    const userItems = document.querySelectorAll('.notion-user-item');
+    
+    // 绑定用户选择事件
+    userItems.forEach(item => {
+        item.addEventListener('click', function() {
+            // 移除所有选中状态
+            userItems.forEach(u => {
+                u.classList.remove('selected');
+                const icon = u.querySelector('div:last-child i');
+                if (icon) icon.className = 'far fa-circle';
+            });
+            
+            // 设置当前项为选中状态
+            this.classList.add('selected');
+            const icon = this.querySelector('div:last-child i');
+            if (icon) icon.className = 'fas fa-check-circle';
+            
+            // 显示或隐藏轮换设置面板
+            if (this.id === 'auto-rotation-option') {
+                rotationPanel.style.display = 'block';
+            } else {
+                rotationPanel.style.display = 'none';
+            }
+        });
+    });
+    
+    // 初始设置
+    if (rotationOption.classList.contains('selected')) {
+        rotationPanel.style.display = 'block';
+    } else {
+        rotationPanel.style.display = 'none';
+    }
+    
+    // 轮换规则选项卡切换
+    const ruleTabs = document.querySelectorAll('#rotation-settings-panel .notion-tab');
+    ruleTabs.forEach((tab, index) => {
+        tab.addEventListener('click', function() {
+            // 切换激活选项卡
+            ruleTabs.forEach(t => t.classList.remove('active'));
+            this.classList.add('active');
+            
+            // 更新提示文本
+            const tipText = document.querySelector('#rotation-settings-panel .fa-lightbulb').parentNode;
+            if (index === 0) {
+                tipText.innerHTML = '<i class="fas fa-lightbulb" style="color: #FFB74D;"></i> 每次任务完成后，下次执行自动分配给下一位成员';
+            } else if (index === 1) {
+                tipText.innerHTML = '<i class="fas fa-lightbulb" style="color: #FFB74D;"></i> 无论任务执行多少次，每周一自动切换到下一位成员';
+            } else {
+                tipText.innerHTML = '<i class="fas fa-lightbulb" style="color: #FFB74D;"></i> 无论任务执行多少次，每月1日自动切换到下一位成员';
             }
         });
     });
