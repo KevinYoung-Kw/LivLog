@@ -240,10 +240,10 @@
 ```bash
 # 打开命令行，进入项目目录
 cd "d:/Github Project/LivLog"
-# 启动Python HTTP服务器
-python -m http.server
+# 启动Python HTTP服务器并设置端口为8080
+python -m http.server 8080
 # 在浏览器中访问
-# http://localhost:8000
+# http://localhost:8080
 ```
 
 #### **方法二：修改浏览器安全设置**

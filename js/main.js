@@ -1,3 +1,23 @@
+// 获取基础路径
+function getBasePath() {
+    // 先尝试从base标签获取
+    const baseElement = document.querySelector('base');
+    if (baseElement) {
+        return baseElement.getAttribute('href') || '';
+    }
+    
+    // 如果没有base标签，尝试从当前URL推断
+    const pathSegments = window.location.pathname.split('/');
+    if (pathSegments.includes('livlog')) {
+        // 找到livlog在路径中的位置，构建基础路径
+        const livlogIndex = pathSegments.indexOf('livlog');
+        return '/' + pathSegments.slice(1, livlogIndex + 1).join('/') + '/';
+    }
+    
+    // 默认返回空字符串（当前路径）
+    return '';
+}
+
 // 定义所有组件文件
 const components = [
     'todo.html',
@@ -25,21 +45,24 @@ function loadComponents() {
         // 清空加载消息
         container.innerHTML = '';
         
+        // 获取基础路径
+        const basePath = getBasePath();
+        
         // 首先显示加载组件
-        loadComponent('loading.html');
+        loadComponent('loading.html', basePath);
         
         // 延迟加载其他组件，给loading一些显示时间
         setTimeout(() => {
             components.filter(c => c !== 'loading.html').forEach(component => {
-                loadComponent(component);
+                loadComponent(component, basePath);
             });
         }, 500);
     }
 }
 
 // 加载单个组件
-function loadComponent(componentName) {
-    fetch(`components/${componentName}`)
+function loadComponent(componentName, basePath = '') {
+    fetch(`${basePath}components/${componentName}`)
         .then(response => {
             if (!response.ok) {
                 throw new Error(`HTTP error ${response.status}`);
@@ -52,6 +75,7 @@ function loadComponent(componentName) {
         })
         .catch(error => {
             console.error(`加载组件 ${componentName} 失败:`, error);
+            console.error(`尝试从路径: ${basePath}components/${componentName}`);
             
             // 如果是第一次失败且是loading组件，可能是文件协议问题
             if (componentName === 'loading.html' && isFileProtocol) {
